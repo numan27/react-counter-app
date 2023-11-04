@@ -14,7 +14,7 @@
 /* Navbar */
 
 .navbar {
-    background-color: rgb(17 24 39);
+    background-color: #232323;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -83,8 +83,8 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 15rem 7rem 0 7rem;
+    justify-content: center;
+    padding: 0 7rem;
 }
 
 .banner-text h1 {
@@ -97,6 +97,7 @@ nav ul li a:hover {
     margin-top: 15px;
     padding: 12px 35px;
     font-size: 24px;
+    color: #fff;
     transition: all 0.3s ease-in-out !important;
 }
 
@@ -138,46 +139,105 @@ nav ul li a:hover {
     font-size: 36px;
     margin-left: 15px;
 }
-.button-container{
-display: flex;
-justify-content: space-around;
-width: 20%;
-margin: 2rem auto;
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    margin: 2rem auto;
 }
+
 button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     margin: 0 25px;
-    background-color:#4BE62E;
+    background-color: #4BE62E;
     color: #333;
     border-radius: 5px;
 }
-button:hover{
+
+button:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.reset-button{
+
+.reset-button {
     background-color: rgb(134, 54, 54);
     color: #fff;
 }
 
-.footer{
+.footer {
     background-color: #333;
     text-align: center;
     color: #fff;
     padding: 10px;
     font-size: 13px;
 }
-.footer span{
+
+.footer span {
     font-style: italic;
     color: #E5570F;
 }
 
 .contact,
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70vh;
     font-weight: bold;
     font-size: 32px;
+}
+
+@media screen and (max-width: 769px) {
+
+    .banner-text {
+        padding: 3rem 1rem;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+    .counter{
+        padding: 6rem 4rem;
+    }
+    .count{
+        width: 70%;
+    }
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+        width: 120px !important;
+    }
+
+    .banner-text {
+        padding: 3rem 0.5rem;
+    }
+
+    .banner-text h1 {
+        font-size: 1rem;
+    }
+    .banner-text button{
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .counter{
+        padding: 3rem 1rem;
+    }
+    .count{
+        width: 70%;
+    }
 }
