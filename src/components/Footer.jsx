@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>All rights reserved CounterClicker</div>
+    <div className='footer'>© 2023 <span>CountClicker</span>. All rights reserved.</div>
   )
 }
 

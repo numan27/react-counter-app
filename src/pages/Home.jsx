@@ -17,13 +17,40 @@ function Home() {
         setCount(0);
     };
 
+    const scrollToCounter = () => {
+        const counterSection = document.getElementById('counter');
+
+        if (counterSection) {
+            counterSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className="counter">
-            <h2>Count: {count}</h2>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={increment}>Increment</button>
-            <button onClick={reset}>Reset</button>
-        </div>
+        <>
+            <div className='main-section'>
+                <div className="banner-text">
+                    <h1>Count effortlessly with our intuitive Counter App. Simple, efficient, and user-friendly counting at your fingertips.</h1>
+                    <button onClick={() => scrollToCounter()}>Get Started</button>
+                </div>
+            </div>
+
+            <div id='counter' className="counter">
+
+                <p>Use the Counter App to effortlessly keep track of numbers, scores, and counts. It's your go-to tool for accurate and efficient counting, making tasks a breeze with its user-friendly interface.</p>
+
+                <div className='count'>
+                    <h2>Count: </h2>
+                    <span> {count}</span>
+                </div>
+
+                <div className='button-container'>
+                    <button onClick={decrement}> + Decrement</button>
+                    <button onClick={increment}> - Increment</button>
+                </div>
+                <button className='reset-button' onClick={reset}>Reset</button>
+            </div>
+
+        </>
     );
 }
 
